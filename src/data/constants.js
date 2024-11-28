@@ -1,6 +1,7 @@
 export const Bio = {
   name: "Raj Kumar Mahto",
   roles: [
+    "Software Engineer",
     "Full-Stack Developer",
     "Frontend Developer",
     "Backend Developer",
