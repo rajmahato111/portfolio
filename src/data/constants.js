@@ -1,8 +1,9 @@
 export const Bio = {
   name: "Raj Kumar Mahto",
   roles: [
+    "Full-Stack Developer",
+    "Frontend Developer",
     "Backend Developer",
-    "Node JS Developer",
     "Java Developer",
     "Python Developer"
   ],
@@ -175,7 +176,7 @@ export const skills = [
       {
         name: "Swagger",
         image:
-          "https://static-00.iconduck.com/assets.00/swagger-icon-1024x1024-09037v1r.png",
+          "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png",
       },
       {
         name: "Figma",
