@@ -166,6 +166,74 @@ export const SubTitle = styled.div`
   }
 `;
 
+export const ContactInfo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+  @media (max-width: 960px) {
+    justify-content: center;
+  }
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+`;
+
+export const ContactItem = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: ${({ theme }) => theme.card};
+  border: 1px solid ${({ theme }) => theme.primary + 20};
+  border-radius: 12px;
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: ${({ theme }) => theme.primary + 10};
+    border-color: ${({ theme }) => theme.primary};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(133, 76, 230, 0.3);
+  }
+  @media (max-width: 640px) {
+    font-size: 13px;
+    padding: 8px 14px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+`;
+
+export const ContactItemDiv = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: ${({ theme }) => theme.card};
+  border: 1px solid ${({ theme }) => theme.primary + 20};
+  border-radius: 12px;
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+  @media (max-width: 640px) {
+    font-size: 13px;
+    padding: 8px 14px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+`;
+
+export const ContactText = styled.span`
+  color: ${({ theme }) => theme.text_primary};
+  font-weight: 400;
+`;
+
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
     -moz-appearance: button;

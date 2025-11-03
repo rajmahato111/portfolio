@@ -57,9 +57,21 @@ const Desc = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 6px;
+  white-space: pre-line;
+  line-height: 1.6;
   @media only screen and (max-width: 600px) {
     font-size: 14px;
     margin: 6px 6px;
+  }
+  
+  & ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 8px 0;
+  }
+  
+  & li {
+    margin: 6px 0;
   }
 `;
 
@@ -182,6 +194,21 @@ const Button = styled.a`
 
 const index = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+  
+  // Convert description with bullet points to proper list format
+  const formatDescription = (description) => {
+    if (!description) return null;
+    
+    const lines = description.split('\n').filter(line => line.trim());
+    const listItems = lines.map((line, index) => {
+      // Remove bullet character (●) and trim
+      const cleanLine = line.replace(/^●\s*/, '').trim();
+      return <li key={index}>{cleanLine}</li>;
+    });
+    
+    return <ul>{listItems}</ul>;
+  };
+  
   return (
     <Modal
       open={true}
@@ -203,10 +230,10 @@ const index = ({ openModal, setOpenModal }) => {
           <Date>{project.date}</Date>
           <Tags>
             {project?.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+              <Tag key={tag}>{tag}</Tag>
             ))}
           </Tags>
-          <Desc>{project?.description}</Desc>
+          <Desc>{formatDescription(project?.description)}</Desc>
           {project.member && (
             <>
               <Label>Members</Label>
@@ -217,14 +244,16 @@ const index = ({ openModal, setOpenModal }) => {
                     <MemberName>{member.name}</MemberName>
                     <a
                       href={member.github}
-                      target="new"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       <GitHub />
                     </a>
                     <a
                       href={member.linkedin}
-                      target="new"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       <LinkedIn />
@@ -235,12 +264,16 @@ const index = ({ openModal, setOpenModal }) => {
             </>
           )}
           <ButtonGroup>
-            {/* <Button dull href={project?.github} target="new">
-              View Code
-            </Button> */}
-            <Button href={project?.webapp} target="new">
-              View Live App
-            </Button>
+            {project?.github && (
+              <Button dull href={project?.github} target="_blank" rel="noopener noreferrer">
+                View Code
+              </Button>
+            )}
+            {project?.webapp && (
+              <Button href={project?.webapp} target="_blank" rel="noopener noreferrer">
+                View Live App
+              </Button>
+            )}
           </ButtonGroup>
         </Wrapper>
       </Container>

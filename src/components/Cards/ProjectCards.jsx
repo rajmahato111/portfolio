@@ -16,7 +16,7 @@ const Button = styled.button`
 `;
 const Card = styled.div`
   width: 330px;
-  height: 560px;
+  min-height: 560px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;
@@ -37,18 +37,30 @@ const Card = styled.div`
   }
 `;
 
-const Image = styled.img`
+const ImageWrapper = styled.div`
   width: 100%;
   height: 180px;
   background-color: ${({ theme }) => theme.white};
   border-radius: 10px;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 `;
 
 const Tags = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 4px;
@@ -68,7 +80,8 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0px;
-  padding: 0px 2px;
+  padding: 0px;
+  align-items: flex-start;
 `;
 const Title = styled.div`
   font-size: 20px;
@@ -85,7 +98,8 @@ const Title = styled.div`
 
 const Date = styled.div`
   font-size: 12px;
-  margin-left: 2px;
+  margin-left: 0px;
+  margin-top: 4px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary + 80};
   @media only screen and (max-width: 768px) {
@@ -108,22 +122,29 @@ const Description = styled.div`
 const Members = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  justify-content: flex-start;
+  padding-left: 0px;
+  margin-top: auto;
 `;
 const Avatar = styled.img`
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  margin-left: -10px;
+  margin-left: 0px;
   background-color: ${({ theme }) => theme.white};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: 3px solid ${({ theme }) => theme.card};
+  &:not(:first-child) {
+    margin-left: -10px;
+  }
 `;
 
 const ProjectCards = ({ project, setOpenModal }) => {
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} alt="'Project Image" />
+      <ImageWrapper>
+        <Image src={project.image} alt="Project Image" />
+      </ImageWrapper>
       <Tags>
         {project.tags?.map((tag, index) => (
           <Tag key={index}>{tag}</Tag>

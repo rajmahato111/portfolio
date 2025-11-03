@@ -96,6 +96,13 @@ function Footer() {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
         </Nav>
+        {(Bio.location || Bio.phone || Bio.email) && (
+          <Nav style={{ fontSize: "0.9rem", marginTop: "0.5rem", gap: "1rem" }}>
+            {Bio.location && <NavLink as="span">{Bio.location}</NavLink>}
+            {Bio.phone && <NavLink as="span">{Bio.phone}</NavLink>}
+            {Bio.email && <NavLink href={`mailto:${Bio.email}`}>{Bio.email}</NavLink>}
+          </Nav>
+        )}
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.linkedin} target="display">
             <LinkedInIcon />

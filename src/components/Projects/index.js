@@ -8,68 +8,29 @@ import {
   CardContainer,
   ToggleButtonGroup,
   ToggleButton,
-  Divider,
 } from "./ProjectsStyle";
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
 
 const Projects = ({ openModal, setOpenModal }) => {
-  const [toggle, setToggle] = useState("all");
+  const [toggle, setToggle] = useState("web app");
   return (
     <Container id="projects">
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          Projects showcasing my work in AI systems, RAG pipelines, and production-ready applications with focus on scalability and performance.
         </Desc>
         <ToggleButtonGroup>
-          {toggle === "all" ? (
-            <ToggleButton active value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          )}
-          <Divider />
-          {toggle === "web app" ? (
-            <ToggleButton
-              active
-              value="web app"
-              onClick={() => setToggle("web app")}
-            >
-              WEB APP'S
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="web app" onClick={() => setToggle("web app")}>
-              WEB APP'S
-            </ToggleButton>
-          )}
-          <Divider />
-          {/* {toggle === 'android app' ?
-            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
-            :
-            <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
-          } */}
-          <Divider />
-          {/* {toggle === 'react native' ?
-            <ToggleButton active value="react native" onClick={() => setToggle('react native')}>React Native Application </ToggleButton>
-            :
-            <ToggleButton value="react native" onClick={() => setToggle('react native')}>React Native Application</ToggleButton>
-          } */}
+          <ToggleButton
+            active
+            value="web app"
+            onClick={() => setToggle("web app")}
+          >
+            Latest Project
+          </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
-          {toggle === "all" &&
-            projects.map((project, idx) => (
-              <ProjectCard
-                key={idx}
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
           {projects
             .filter((item) => item.category === toggle)
             .map((project, index) => (

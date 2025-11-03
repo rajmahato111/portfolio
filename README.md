@@ -1,70 +1,217 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website showcasing my work as an AI Software Engineer, featuring projects in LLM systems, RAG pipelines, and production-ready applications.
 
-## Available Scripts
+**Live Site:** [https://rajmahato111.github.io/portfolio/](https://rajmahato111.github.io/portfolio/)
 
-In the project directory, you can run:
+## 🚀 Features
+
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Dark Theme** - Modern dark UI with smooth animations
+- **Interactive Components** - Project cards with modal details, skills showcase, timeline views
+- **Contact Form** - EmailJS integration for direct email sending
+- **Smooth Scrolling** - Single-page application with anchor navigation
+- **Project Filtering** - Filter projects by category (Latest Project)
+- **Typewriter Effect** - Dynamic role display in hero section
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React 18.3
+- **Styling:** Styled Components, Material-UI
+- **Email Service:** EmailJS
+- **Icons:** React Icons, Material-UI Icons
+- **Animations:** Typewriter Effect
+- **Deployment:** GitHub Pages
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/rajmahato111/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure EmailJS (Optional but Recommended)**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   REACT_APP_SERVICE_ID=your_service_id
+   REACT_APP_TEMPLATE_ID=your_template_id
+   REACT_APP_PUBLIC_KEY=your_public_key
+   ```
+   
+   See the [EmailJS Configuration](#emailjs-configuration) section below for detailed setup.
+
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
+   
+   The app will open at [http://localhost:3000](http://localhost:3000)
+
+## 📝 Available Scripts
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
 ### `npm run build`
+Builds the app for production to the `build` folder. The build is optimized for production with minified files and performance enhancements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run deploy`
+Builds the app and deploys it to GitHub Pages using the `gh-pages` package.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm test`
+Launches the test runner in interactive watch mode.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 EmailJS Configuration
 
-### `npm run eject`
+The contact form uses EmailJS for sending emails. Here's how to set it up:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Step 1: Create EmailJS Account
+1. Sign up at [EmailJS](https://www.emailjs.com/)
+2. Verify your email address
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Step 2: Create Email Service
+1. Go to **Email Services** in the dashboard
+2. Add a service (Gmail, Outlook, etc.)
+3. Follow the setup instructions for your email provider
+4. Note your **Service ID** (e.g., `service_oiw7krh`)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Step 3: Create Email Template
+1. Go to **Email Templates** → **Create New Template**
+2. Use this template:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   **Subject:** `{{subject}} - Portfolio Contact Form`
+   
+   **Template Content:**
+   ```
+   Hi Raj,
+   
+   You have received a new message from your portfolio website:
+   
+   From: {{from_name}}
+   Email: {{from_email_id}}
+   Subject: {{subject}}
+   
+   Message:
+   {{message}}
+   
+   ---
+   This email was sent from your portfolio contact form.
+   ```
 
-## Learn More
+3. **Template Settings (Important):**
+   - **To Email:** Your recipient email
+   - **From Name:** `{{from_name}}` (must match exactly)
+   - **Reply To:** `{{from_email_id}}` (must match exactly)
+   - **Subject:** `{{subject}} - Portfolio Contact Form`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Save and note your **Template ID** (e.g., `template_lh3aud6`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Step 4: Get Public Key
+1. Go to **Account** → **General** → **API Keys**
+2. Copy your **Public Key**
 
-### Code Splitting
+### Step 5: Configure Environment Variables
+Create a `.env` file in the project root:
+```env
+REACT_APP_SERVICE_ID=service_oiw7krh
+REACT_APP_TEMPLATE_ID=template_lh3aud6
+REACT_APP_PUBLIC_KEY=your_public_key_here
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Step 6: Restart Development Server
+After updating `.env`, restart your dev server:
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+**Note:** If EmailJS is not configured, the form will use a `mailto:` fallback that opens the user's email client.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Deployment
 
-### Making a Progressive Web App
+### Deploy to GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
+   
+   This creates a production build in the `build/` folder with environment variables embedded.
 
-### Advanced Configuration
+2. **Deploy**
+   ```bash
+   npm run deploy
+   ```
+   
+   This will automatically:
+   - Build the project
+   - Deploy to the `gh-pages` branch
+   - Make it available at `https://username.github.io/portfolio/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Important Notes for Deployment
 
-### Deployment
+- **Environment variables are embedded at BUILD TIME**, not runtime
+- The `.env` file is ignored by git (in `.gitignore`) for security
+- Make sure your `.env` file is configured before running `npm run build`
+- After deployment, EmailJS will work in production because the credentials are baked into the build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📁 Project Structure
 
-### `npm run build` fails to minify
+```
+portfolio/
+├── public/                 # Static files
+├── src/
+│   ├── components/         # React components
+│   │   ├── Contact/       # Contact form component
+│   │   ├── HeroSection/   # Hero section with bio
+│   │   ├── Projects/      # Projects showcase
+│   │   ├── Skills/         # Skills display
+│   │   ├── Experience/    # Work experience timeline
+│   │   ├── Education/     # Education timeline
+│   │   └── ...
+│   ├── data/
+│   │   └── constants.js   # Portfolio data (bio, projects, skills, etc.)
+│   ├── images/            # Image assets
+│   ├── themes/            # Theme configuration
+│   └── utils/             # Utility functions
+├── .env                   # Environment variables (not in git)
+└── package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎨 Customization
+
+To customize the portfolio for your own use:
+
+1. **Update Personal Information**
+   - Edit `src/data/constants.js`
+   - Update `Bio` object with your details
+   - Update `skills`, `experiences`, `education`, and `projects` arrays
+
+2. **Update Images**
+   - Replace `src/images/RajImage.jpeg` with your own photo
+   - Update project images in the `projects` array
+
+3. **Customize Colors/Theme**
+   - Edit `src/utils/Themes.js` to change color scheme
+   - Modify styled components in individual component files
+
+## 📄 License
+
+This project is open source and available for personal and commercial use.
+
+## 📧 Contact
+
+For questions or opportunities, reach out via:
+- **Email:** rajmahato111@gmail.com
+- **LinkedIn:** [linkedin.com/in/rajmahato111](https://www.linkedin.com/in/rajmahato111/)
+- **GitHub:** [github.com/rajmahato111](https://github.com/rajmahato111)
+
+---
+
+**Built with React and deployed on GitHub Pages**

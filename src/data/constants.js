@@ -1,17 +1,20 @@
 export const Bio = {
   name: "Raj Kumar Mahto",
   roles: [
-    "Software Engineer",
-    "Full-Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Java Developer",
-    "Python Developer"
+    "AI Software Engineer",
+    "Generative AI Engineer",
+    "LLM Engineer",
+    "RAG Systems Specialist",
+    "Backend Engineer",
+    "Cloud Architect"
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "AI Software Engineer with 6 years of experience designing and deploying production LLM and RAG systems across fintech, healthcare, and enterprise platforms. Expert in RAG, Agentic AI, and Cloud-native deployment. Delivered systems processing 33M+ transactions with 99.95% uptime and 100K+ queries/day.",
+  location: "Tempe, AZ",
+  phone: "+1-623-445-1844",
+  email: "rajmahato111@gmail.com",
   github: "https://github.com/rajmahato111",
-  resume: "https://drive.google.com/file/d/1E6jdU0Ow5TdXdTfjEdwKhIvNunSexlcj/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1oxv3mcZ2TLRgkFP6FHWZ-LcfI15l7nL9/view",
   linkedin: "https://www.linkedin.com/in/rajmahato111/",
   twitter: "https://x.com/rajmahato111",
   insta: "https://www.instagram.com/rajmahato111/",
@@ -19,6 +22,82 @@ export const Bio = {
 };
 
 export const skills = [
+  {
+    title: "AI/ML",
+    skills: [
+      {
+        name: "LLM",
+        image: "https://www.agora.software/wp-content/uploads/2024/08/icon-llm-new.svg",
+      },
+      {
+        name: "RAG",
+        image: "https://miro.medium.com/v2/resize:fit:1200/1*07KdoHkVRiP2w1l8mq4-Ow.png",
+      },
+      {
+        name: "LangChain",
+        image: "https://images.seeklogo.com/logo-png/52/1/langchain-logo-png_seeklogo-528369.png",
+      },
+      {
+        name: "LangGraph",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0tMy04aDZ2Mkg5VjZ6bTMgMTJoNlYxNGgtNlYyMHoiIGZpbGw9IiNlMzJjNTAiLz48L3N2Zz4=",
+      },
+      {
+        name: "LlamaIndex",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0tRZikZb4WdnDGIffbT9nnwZp2rl9Ib6LJA&s",
+      },
+      {
+        name: "Vector DBs",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0tMy0xMkg3djJIMTB2LTJ6bTAgNGgtM3YySDl2LTJ6bTMtNGg3djJIMTJ2LTJ6bTAgNGg3djJIMTB2LTJ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+",
+      },
+      {
+        name: "Pinecone",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0wLTE0Yy0yLjIxIDAtNCAxLjc5LTQgNHMxLjc5IDQgNCA0IDQtMS43OSA0LTQtMS43OS00LTQtNHoiIGZpbGw9IiNmZmZmZmYiLz48cGF0aCBkPSJNMTIgOGwtNC40IDcgMi40IDQuMiA0LjQtNy0yLjQtNC4yem0wLTJsNC40IDcgMi40IDQuMi00LjQtNy0yLjQtNC4yeiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==",
+      },
+      {
+        name: "ChromaDB",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0wLTZjLTEuMSAwLTItLjktMi0yczEtMiAyLTIgMiAuOSAyIDItLjkgMi0yIDJ6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTEyIDEyYzAtMS42IDEuMzQtMyAzLTMgMS42IDAgMyAxLjQgMyAzcy0xLjQgMy0zIDNjLTEuNjYgMC0zLTEuNC0zLTN6IiBmaWxsPSIjZmZmIi8+PC9zdmc+",
+      },
+      {
+        name: "FAISS",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0wLTdjLTEuNjYgMC0zIDEuMzQtMyAzaDZjMC0xLjY2LTEuMzQtMy0zLTN6bTAtNGMtMS42NiAwLTMgMS4zNC0zIDNoNmMwLTEuNjYtMS4zNC0zLTMtM3oiIGZpbGw9IiMxODc3RjIiLz48L3N2Zz4=",
+      },
+      {
+        name: "Fine-tuning",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0tMS0xM0g5djJoMlY3em0wIDRIMTJWMTFIMTF2MnoiIGZpbGw9IiMzM2ZmOTkiLz48L3N2Zz4=",
+      },
+      {
+        name: "Prompt Engineering",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0tMS0xMkg5djJoMlY4em0wIDRIMTJWMTFIMTF2M3oiIGZpbGw9IiNmZmYiLz48L3N2Zz4=",
+      },
+    ],
+  },
+  {
+    title: "Programming Languages",
+    skills: [
+      {
+        name: "Python",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+      },
+      {
+        name: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+      },
+      {
+        name: "TypeScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png",
+      },
+      {
+        name: "Java",
+        image: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+      },
+      {
+        name: "GO",
+        image: "https://go.dev/images/go-logo-blue.svg",
+      },
+    ],
+  },
   {
     title: "Frontend",
     skills: [
@@ -33,86 +112,94 @@ export const skills = [
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
       },
       {
-        name: "JavaScript",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-      },
-      {
-        name: "TypeScript",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png",
-      },
-      {
-        name: "Redux",
-        image:
-          "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
-      },
-      {
-        name: "Tailwind CSS",
-        image:
-          "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tailwind-css-icon.png",
-      },
-      {
-        name: "HTML5",
-        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
-      },
-      {
-        name: "CSS3",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
-      },
-      {
-        name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
-      },
-      {
         name: "GraphQL",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png",
       },
-      {
-        name: "React Testing Library",
-        image: "https://testing-library.com/img/octopus-64x64.png",
-      },
-      {
-        name: "Jest",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVHcEzfxMz////////////s2+D////////8+fr//v7z5+v+/P3//f7//v///////////////////////v7///////////////+aQ1yYPliVOFSydIXUtLyjVmyraXvq2d7InanAkJ25g5KSLU3YYNw1AAAAGHRSTlMA/a7Ab+kbKPf89+PN1wsvm4gDTlQ3QF9D6eTdAAABW0lEQVQokY1S2Y6DMAzMVchFKdB2E+ck/P8/bhClB33YHUXKw8j2zNgI/Q9N+45m/CCZOr0gh/MHeZWz21ESO7SlBewGcPp2GHrxxhi7PpvJeCAnFawNOVpr8KErQqMuALPIxsau/TIz4CVgfYqQybfTG4dCbyQv8udD6fZ1Mx7Qz8nxN5PtQMmE0Jlx3vXorKW43F8ecPG6qSXzLK/ornDhl53rtQNzYohka7PgnAcoanpGM9sgpzWE4HHwIpqs+2db7lON5KYwTg5CEknQh0R0Jomrqq/tko/WQPTYq+uDvHKXaB1NU1jsGi8ske/5DTIk1bBOupVaAVGwXY+3QXTcx20plQOsH+G2OgPE5NZV1VUuy1LkXohamsHYdZoFE+YkBO+eATXEm01HcFgoemHv58P4DBWhYEGGan58v4KGSJ+zT5ywz5NbMVYbglM2NV/UJqrvm+NJ/YFfvNEd3X1AOooAAAAASUVORK5CYII=",
-      },
     ],
   },
   {
-    title: "Backend",
+    title: "Backend & Frameworks",
     skills: [
       {
-        name: "Node Js",
+        name: "FastAPI",
+        image: "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
+      },
+      {
+        name: "Node.js",
         image: "https://nodejs.org/static/images/logo.svg",
       },
       {
-        name: "Express Js",
+        name: "Express.js",
         image:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEX////8/Pz09PT19fX4+Pjd3d2ampoAAAAzNDWoqKno6Oh0dHRcXFzIycm5ubktLi4hIiN7e3yLi4tmZ2fi4uI9Pj7S0tIHCQuzs7NJSkru7u6goKB+f3/W1taNjo69vb1PT1BsbW0VFRc3ODhehn9TAAAA30lEQVR4Ad3QhXHEMBBA0W8QmAVmTq7/HjOeDdSQewNiLfBukjRNM4A0TeCR/0wSpY0xtiihMgWPsraNnLWd8yFEE3vyOIwAeprhMQ5Lm8O6uT3hWPwKjQspj+zsLvlBuwNmV1DaukS+t3sqs8MWkAU7ejMiGnMhkjoCqnZmQ3CZPwM8Hy/8Hd7xF7BWzjQIxulCsJaQbG6r7xXR2zNHrn1s0AwhUdNPjunejTLxTlHedS89EOMwFAkobzR4ewFptRyI9tPY18uZkFIYzUO5akWU22BflYKx2xGX1Rn/yxf+uwzyBt/vSwAAAABJRU5ErkJggg==",
-      },
-      {
-        name: "Java",
-        image: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
-      },
-      {
-        name: "Python",
-        image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
       },
       {name: "Django",
         image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg"
       },
       {
+        name: "Flask",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmD38KsMgEwahtWc_Nfs5ZVktP9dBc36MUZA&s",
+      },
+      {
         name: "Spring Boot",
         image: "https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg"
       },
+    ],
+  },
+  {
+    title: "Cloud & Infrastructure",
+    skills: [
       {
-        name: "Oracle",
-        image: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg"
+        name: "AWS",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
       },
+      {
+        name: "EKS",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+      },
+      {
+        name: "Lambda",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+      },
+      {
+        name: "Bedrock",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+      },
+      {
+        name: "GCP",
+        image: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png",
+      },
+      {
+        name: "Azure",
+        image: "https://azure.microsoft.com/svghandler/cloud-services/",
+      },
+      {
+        name: "Docker",
+        image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
+      },
+      {
+        name: "Kubernetes",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg"
+      },
+      {
+        name: "Terraform",
+        image: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/terraform-icon-zp95oytvn5ci8lsub9sbeh.png/terraform-icon-tew8r4clf5ocvoyj0o05j.png?_a=DATAg1AAZAA0",
+      },
+      {
+        name: "CI/CD",
+        image: "https://cdn.worldvectorlogo.com/logos/jenkins-1.svg",
+      },
+      {
+        name: "Jenkins",
+        image:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABHVBMVEX////39/eZmZtVUlGFeW2Admtxbm3Cw8W4t7h0cnSonZD65Mr54cSynIPy2bvq0bPw1rd1aFvs7OxbWFiLioy2pJDJs5nz2bnSu5+EfXiqqquCf4BeXmPZ3d1DAABJSlDgx6reyrKfjnzAq5NqXE5/GRmWSEOrnYxnX1dyAADpLCiQXlaPgHDaJiJvXl6UDAnaMy+rIiGbloGib2GeCgDMJSDUODOzFxidjHmbIyOEc3OOgIAgLz9ZWE0bSl9SKiyAXV27MixHNDo5bIQ/b4chOkmHjZCQKCJRNDF0Wk95NDd6KiiCaGgzUGGsMjB5MDJrOT9SZnKMpq9PdYQaQldvTk4zS1uHvtVXR1NeAgBBHigmMToWOUwFGygAIzhANql4AAABWUlEQVR4AayRAxIDMRRAa66VrW0ta9u27n+LalCOGycv34q/NKVKrdHq9D+ZwWgyQxAEq34zCEExDMK/ZQmSohENAzCUtXxBq83OoBiCohgKfzKHU+1yA8zjxWif/0OvMhAMhX0AsCygWV+EeIO2aMyNAgwDAIHicCL5JpjieMF3g4jb66VFTnK8hiGn0xkTcAOPN+tlc2n5NVYqkU5zMTPDQr6sG+fSXP4FFm73XDEEQgLKlMqVNFd9leRq9Uaz1e7w3V663xhww9cMyPXmaDQqjzm+n5ncNuo1BVKncYOj6XjmmC+W6cxbGlbyDa1H68WmPR9NE/337EnbOywXWzPXcje0vedPtR+NDm2rQU+1KIODMLxT22h0fOg4GvQOpepDdDk6Oh6QtFGqz7pQp/P9iXAZFARxHWb6YmcCSUpxYE9+YJtk2LFLynJKSYlI4Uy6QkKMxKZyAGgaMOiIUjjnAAAAAElFTkSuQmCC",
+      },
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
       {
         name: "PostgreSQL",
         image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
@@ -127,12 +214,12 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
       },
       {
-        name: "AWS",
+        name: "DynamoDB",
         image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
       },
       {
-        name: "Firebase",
-        image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+        name: "Redis",
+        image: "https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png",
       },
     ],
   },
@@ -150,7 +237,7 @@ export const skills = [
       },
       {
         name: "Docker",
-        image: "https://upload.wikimedia.org/wikipedia/en/f/f4/Docker_logo.svg"
+        image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
       },
       {
         name: "Kubernetes",
@@ -196,32 +283,56 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg",
-    role: "Staff Software  Engineer",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Infor_logo.svg/2048px-Infor_logo.svg.png",
+    role: "Software Engineer (AI Systems)",
+    company: "Infor",
+    date: "May 2025 - Aug 2025",
+    desc: `
+      ● Built production-ready RAG service enabling natural-language access to ERP data using FastAPI, LangChain, GPT-4, and ChromaDB; deployed on AWS EKS with full CI/CD, serving 100K+ queries/day with less than 200ms latency.
+      ● Engineered data-readiness scoring logic assessing completeness and consistency for 33M+ records, cutting manual validation time by 40%.
+      ● Architected caching strategy for embeddings and retrieval, reducing average response latency by 35% and cutting LLM API costs by $1k/month while maintaining 99.5% accuracy.
+      ● Implemented monitoring with Grafana and OpenTelemetry to track inference latency, throughput, and usage in production.
+    `,
+    skills: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "GPT-4",
+      "ChromaDB",
+      "AWS EKS",
+      "CI/CD",
+      "Grafana",
+      "OpenTelemetry",
+      "RAG",
+      "Vector DBs",
+    ],
+  },
+  {
+    id: 1,
+    img: "https://upload.wikimedia.org/wikipedia/commons/7/72/DeloitteNewLogo.jpg",
+    role: "Senior Software Engineer (AI & Cloud Systems)",
     company: "Deloitte",
     date: "Apr 2022 - Aug 2024",
     desc: `
-      ● Built a high-efficiency solution for pharmaceutical trials, using ReactJS, NodeJS, Serverless, REST API, JavaScript, PostgreSQL, 
-      and AWS, which reduced trial efforts by 50% and cut processing time by 40%, earning the Applause Award.
-      ● Integrated end-to-end courier logistics, using NodeJS, Serverless, and AWS, significantly enhancing delivery reliability 
-      and decreasing shipping errors by up to 25%.
-      ● Deployed open-source Apache Superset for data visualization using Python, saving $15,000 annually in software 
-      licensing costs and resulting in substantial improvements in key performance metrics.
+      ● Architected microservices platform handling 10,000+ clinical trial records with 99.9% uptime, implementing event-driven architecture for real-time data synchronization across regulatory systems.
+      ● Implemented an AI-driven document compliance agent leveraging LLM (GPT-4) and Retrieval-Augmented Generation (RAG) to summarize and cross-reference regulatory reports, increasing reviewer throughput by 35%.
+      ● Built agentic automation workflows using LangChain and AWS Lambda to route data-validation tasks and generate audit summaries, reducing manual intervention and improving task efficiency.
+      ● Implemented real-time KPI dashboards with Apache Superset, Python, and SQL, replacing legacy BI tools and saving $15K annually in licensing costs while improving visibility across teams.
+      ● Designed and secured REST APIs with PostgreSQL under HIPAA compliance, integrating SonarQube quality gates to reduce code complexity by 35% and duplication by 20%.
     `,
     skills: [
-      "ReactJS",
-      "NextJS",
-      "JavaScript",
-      "TypeScript",
-      "Redux Toolkit",
-      "HTML",
-      "CSS",
-      "Jest",
-      "NodeJS",
+      "Python",
+      "LangChain",
+      "GPT-4",
+      "RAG",
+      "AWS Lambda",
       "PostgreSQL",
-      "Serverless",
-      "Kubernetes",
-      "AWS",
+      "Microservices",
+      "Event-Driven Architecture",
+      "Apache Superset",
+      "HIPAA",
+      "Node.js",
+      "JavaScript",
     ],
   },
   {
@@ -230,46 +341,41 @@ export const experiences = [
     role: "Software Engineer",
     company: "Datamatics",
     date: "Mar 2021 - Mar 2022",
-    desc: `● Created backend functionalities using Node.js, Express.js, and AWS to improve system reliability and handle a daily 
-user base of 50,000 active users.
-● Enhanced system scalability using AWS, which increased system efficiency by 2x and allowed seamless performance 
-during peak loads.
-● Developed a dashboard using React, Node.js, and JavaScript to automate agent onboarding, reducing the process 
-time from 1 hour to under 10 minutes, significantly increasing efficiency and supporting network expansion.`,
+    desc: `● Engineered backend services in JavaScript and Node.js for a fintech platform serving 50K+ users, improving latency by 40% and automating onboarding by 90%.
+● Optimized SQL queries and Redis caching, reducing response times by 65% and enabling platform to handle 50K+ transactions/day.
+● Delivered secure payment integration APIs, ensuring compliance with financial data security standards and enhancing transaction reliability.
+● Collaborated with product and DevOps teams to containerize services using Docker and automate CI/CD pipelines, improving deployment efficiency by 30%.`,
     skills: [
-      "ReactJS",
       "JavaScript",
-      "HTML",
-      "CSS",
-      "Jest",
-      "NodeJS",
+      "Node.js",
+      "Express.js",
       "MySQL",
-      "ExpressJS",
-      "AWS",
+      "Redis",
       "Docker",
-      "Git",
+      "CI/CD",
+      "REST APIs",
+      "Fintech",
     ],
   },
   {
     id: 3,
-    img: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Hexagon_AB_Logo_Color.svg",
-    role: "Software Engineer",
-    company: "Hexagon Global",
+    img: "https://image.pitchbook.com/LzEJhpEUaklCIIpB0XlfcWMnqoh1648831483750_200x200",
+    role: "Associate Software Engineer",
+    company: "Hexagram Fintech Pvt Ltd",
     date: "Aug 2019 - Mar 2021",
-    desc: `● Created a Report Designer feature using Java and MySQL, simplifying the report creation process and reducing the 
-time from 2-3 hours to under 30 minutes, resulting in enhanced efficiency and improved workflow.
-● Implemented ETL processes using Java for data integration and transformation, enhancing data processing efficiency 
-by 25%.
-● Troubleshot and debugged back-end issues in Java-based systems, optimizing MySQL queries to reduce system 
-downtime by 40% and improve database performance.`,
+    desc: `● Developed Report Designer using Java, Spring Boot, and React, reducing report creation time from 4 hours to 30 minutes.
+● Optimized data ingestion and API layers, improving backend throughput by 25% and system reliability under load.
+● Automated CI/CD with Docker and Kubernetes, reducing deployment time by 30%.
+● Enhanced backend data processing and caching mechanisms using Redis, ensuring reliable access to large datasets for reporting.`,
     skills: [
       "Java",
-      "JavaScript",
-      "MySQL",
       "Spring Boot",
-      "HTML5",
-      "CSS3",
-      "Material Ui",
+      "React",
+      "MySQL",
+      "Redis",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
     ],
   },
 ];
@@ -278,48 +384,51 @@ export const education = [
   {
     id: 1,
     img: "https://upload.wikimedia.org/wikipedia/en/a/a1/Arizona_State_University_seal.svg",
-    school: "Arizona State University, Arizona",
+    school: "Arizona State University",
     date: "Aug 2024 - May 2026",
-    gpa: "4.00 GPA",
-    desc: "Currently pursuing a Master of Science in Data Science, Analytics, and Engineering with a focus on machine learning, data analysis, and scalable systems.",
-    degree: "Master of Science, Data Science, Analytics, and Engineering",
+    gpa: "GPA: 4.0/4.0",
+    desc: "Currently pursuing a Master of Science in Data Science, Analytics, and Engineering with a focus on machine learning, data analysis, AI systems, and scalable distributed systems.",
+    degree: "M.S. Data Science, Analytics, and Engineering",
   },  
   {
-    id: 1,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Qkv-Yt0a2nG8aeuyLSRP3Ps5Jqyk3P14YA&s",
-    school: "Atria Institute of Technology, Bangalore",
-    date: "Aug 2014 - June 2018",
-    percentage: "7.2 CGPA",
-    desc: "I completed my bachelor of engineering degree from Atria Institute of Technology, Bangalore. Where i completed my degree in Computer Science and Engineering.",
-    degree: "Bachelor of Engineering, Computer Science and Engineering",
+    id: 2,
+    img: "https://upload.wikimedia.org/wikipedia/en/a/a0/Visvesvaraya_Technological_University_logo.png",
+    school: "Visvesvaraya Technological University",
+    date: "Aug 2014 - Jun 2018",
+    gpa: "GPA: 3.5",
+    desc: "Completed Bachelor of Engineering in Computer Science & Engineering with focus on software engineering, algorithms, and data structures.",
+    degree: "B.E. Computer Science & Engineering",
   }
 ];
 
 export const projects = [
   {
     id: 0,
-    title: "DoctorOnCall",
-    date: "Jun 2024 - Sept 2024",
+    title: "Code Quality Intelligence Agent",
+    date: "Aug 2025 - Sep 2025",
     description:
-      `● Engineered an advanced doctor appointment platform using React, Node.js, and Prisma, offering flexible scheduling 
-and intelligent doctor matching, reducing appointment scheduling time by 50%.
-● Integrated automated notifications and intuitive dashboards, leading to a 40% increase in user satisfaction and 
-streamlined management.`,
+      `● Built an AI-driven agent that detects security, performance, and maintainability issues across multi-language repositories.
+● Integrated a Retrieval-Augmented Generation (RAG) pipeline using LangChain and ChromaDB for contextual Q&A on codebases.
+● Designed a modular analysis orchestrator with FastAPI backend and React dashboard for interactive code-quality insights.
+● Added AST-based analyzers for code duplication, complexity, and test coverage with LLM explanations and fix suggestions.
+● Analyzed 100K+ LOC repositories with multi-language support and produced PDF reports for CI/CD integration.`,
     image:
-      "https://www.doctoroncall.com/marketplace/img/logo/B2B-Logo.png",
+      "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     tags: [
+      "Python",
+      "FastAPI",
       "React.js",
-       "Node.js",
-       "MySQL",
-      "TypeScript",
-      "JavaScript",
-      "Redux",
-      "Bootstrap",
-      "HTML5",
-      "CSS3",
+      "LangChain",
+      "RAG",
+      "ChromaDB",
+      "LLM",
+      "AST",
+      "CI/CD",
+      "Node.js",
     ],
     category: "web app",
-    webapp: "https://clouldplaydoctor.online/",
+    github: "https://github.com/rajmahato111/Code-Quality-Intelligence-Agent",
+    webapp: "",
     member: [
       {
         name: "Raj Kumar Mahto",

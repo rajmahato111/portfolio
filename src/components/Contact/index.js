@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Snackbar } from "@mui/material";
+import { Snackbar, Alert } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
@@ -134,10 +134,44 @@ const ContactButton = styled.input`
 const Contact = () => {
   //hooks
   const [open, setOpen] = React.useState(false);
+  const [error, setError] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError(false);
+    setErrorMessage("");
+    
+    const formData = new FormData(form.current);
+    const email = formData.get("from_email_id") || form.current.elements["from_email_id"]?.value;
+    const name = formData.get("from_name") || form.current.elements["from_name"]?.value;
+    const subject = formData.get("subject") || form.current.elements["subject"]?.value;
+    const message = formData.get("message") || form.current.elements["message"]?.value;
+    
+    // Check if EmailJS is configured
+    if (!process.env.REACT_APP_SERVICE_ID || !process.env.REACT_APP_TEMPLATE_ID || !process.env.REACT_APP_PUBLIC_KEY) {
+      // Fallback to mailto: if EmailJS is not configured
+      const recipientEmail = "rajmahato111@gmail.com";
+      const mailtoSubject = encodeURIComponent(subject || "Contact from Portfolio");
+      const mailtoBody = encodeURIComponent(
+        `Name: ${name || "Not provided"}\nEmail: ${email || "Not provided"}\n\nMessage:\n${message || ""}`
+      );
+      const mailtoLink = `mailto:${recipientEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      // Show success message
+      setTimeout(() => {
+        setOpen(true);
+        form.current.reset();
+        setLoading(false);
+      }, 100);
+      return;
+    }
+
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -149,9 +183,13 @@ const Contact = () => {
         (result) => {
           setOpen(true);
           form.current.reset();
+          setLoading(false);
         },
         (error) => {
           console.log(error.text);
+          setError(true);
+          setErrorMessage(error.text || "Failed to send email. Please try again or contact directly.");
+          setLoading(false);
         }
       );
   };
@@ -169,15 +207,28 @@ const Contact = () => {
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactButton type="submit" value={loading ? "Sending..." : "Send"} disabled={loading} />
         </ContactForm>
         <Snackbar
           open={open}
           autoHideDuration={6000}
           onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        >
+          <Alert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
+            {process.env.REACT_APP_SERVICE_ID ? 'Email sent successfully!' : 'Opening your email client...'}
+          </Alert>
+        </Snackbar>
+        <Snackbar
+          open={error}
+          autoHideDuration={6000}
+          onClose={() => setError(false)}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        >
+          <Alert onClose={() => setError(false)} severity="error" sx={{ width: '100%' }}>
+            {errorMessage || "Failed to send email. Please try again."}
+          </Alert>
+        </Snackbar>
       </Wrapper>
     </Container>
   );
