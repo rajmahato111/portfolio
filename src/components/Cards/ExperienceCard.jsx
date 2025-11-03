@@ -19,6 +19,16 @@ const Description = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
   margin-bottom: 10px;
+  white-space: normal;
+  line-height: 1.6;
+  & ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 8px 0;
+  }
+  & li {
+    margin: 6px 0;
+  }
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -151,7 +161,25 @@ const ExperienceCard = ({ experience }) => {
         </Body>
       </Top>
       <Description>
-        {experience?.desc && <Span>{experience?.desc}</Span>}
+        {experience?.desc && (
+          <Span as="div">
+            {(() => {
+              const lines = String(experience.desc)
+                .split('\n')
+                .map((l) => l.trim())
+                .filter((l) => l);
+              if (lines.length === 0) return null;
+              return (
+                <ul>
+                  {lines.map((line, idx) => {
+                    const clean = line.replace(/^●\s*/, '');
+                    return <li key={idx}>{clean}</li>;
+                  })}
+                </ul>
+              );
+            })()}
+          </Span>
+        )}
         {experience?.skills && (
           <>
             <br />
