@@ -1,20 +1,19 @@
 export const Bio = {
   name: "Raj Kumar Mahto",
   roles: [
-    "AI Software Engineer",
-    "Generative AI Engineer",
-    "LLM Engineer",
+    "AI Engineer",
+    "LLM Systems Engineer",
+    "Multi-Agent Systems Builder",
     "RAG Systems Specialist",
-    "Backend Engineer",
-    "Cloud Architect"
+    "Cloud-Native AI Engineer",
   ],
   description:
-    "AI Software Engineer with 6 years of experience designing and deploying production LLM and RAG systems across fintech, healthcare, and enterprise platforms. Expert in RAG, Agentic AI, and Cloud-native deployment. Delivered systems processing 33M+ transactions with 99.95% uptime and 100K+ queries/day.",
-  location: "Tempe, AZ",
+    "AI Engineer with 6 years of experience engineering production LLM systems, distributed inference, and high-throughput microservices. Architected multi-agent orchestration systems cutting manual provisioning by 80%, built high-scale enterprise RAG pipelines handling 100K+ daily queries over 33M+ records, and enforced automated CI/CD evaluation gates. Deep expertise building low-latency LLM serving platforms with vLLM and Ray, production fine-tuning pipelines (LoRA, SFT, DPO), and cloud-native AI infrastructure on AWS and GCP.",
+  location: "San Francisco, CA",
   phone: "+1-623-445-1844",
   email: "rajmahato111@gmail.com",
   github: "https://github.com/rajmahato111",
-  resume: "https://drive.google.com/file/d/1oxv3mcZ2TLRgkFP6FHWZ-LcfI15l7nL9/view",
+  resume: `${process.env.PUBLIC_URL}/Raj_Kumar_Resume.pdf`,
   linkedin: "https://www.linkedin.com/in/rajmahato111/",
   twitter: "https://x.com/rajmahato111",
   insta: "https://www.instagram.com/rajmahato111/",
@@ -42,8 +41,20 @@ export const skills = [
         image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LTggczMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4em0tMy04aDZ2Mkg5VjZ6bTMgMTJoNlYxNGgtNlYyMHoiIGZpbGw9IiNlMzJjNTAiLz48L3N2Zz4=",
       },
       {
-        name: "LlamaIndex",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0tRZikZb4WdnDGIffbT9nnwZp2rl9Ib6LJA&s",
+        name: "crewAI",
+        image: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+      },
+      {
+        name: "vLLM",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      },
+      {
+        name: "PyTorch",
+        image: "https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg",
+      },
+      {
+        name: "Hugging Face",
+        image: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
       },
       {
         name: "Vector DBs",
@@ -283,96 +294,122 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Infor_logo.svg/2048px-Infor_logo.svg.png",
-    role: "Software Engineer (AI Systems)",
-    company: "Infor",
-    date: "May 2025 - Aug 2025",
+    img: `${process.env.PUBLIC_URL}/odyn-logo.png`,
+    role: "AI Engineer",
+    company: "Pebl (Odyn Network)",
+    date: "Jan 2026 - Present",
     desc: `
-      ● Built production-ready RAG service enabling natural-language access to ERP data using FastAPI, LangChain, GPT-4, and ChromaDB; deployed on AWS EKS with full CI/CD, serving 100K+ queries/day with less than 200ms latency.
-      ● Engineered data-readiness scoring logic assessing completeness and consistency for 33M+ records, cutting manual validation time by 40%.
-      ● Architected caching strategy for embeddings and retrieval, reducing average response latency by 35% and cutting LLM API costs by $1k/month while maintaining 99.5% accuracy.
-      ● Implemented monitoring with Grafana and OpenTelemetry to track inference latency, throughput, and usage in production.
+      ● Architected an event-driven multi-agent GPU scheduling framework (LangGraph, crewAI, MCP) autonomously routing 80% of inference and fine-tune workloads across multi-cloud GPU providers, saving 15 engineering hours weekly.
+      ● Instrumented agent execution loops with LangSmith tracing, OpenTelemetry, and automated failure taxonomies, reducing non-deterministic agent debugging time by 40%.
+      ● Fine-tuned a RoBERTa sequence classifier (LoRA, MLflow) predicting request token length before scheduling; dynamically allocated vLLM engine configs and boosted cluster-wide GPU memory utilization from 70% to 95%.
+      ● Shipped a self-serve fine-tuning platform supporting SFT and DPO, using VRAM prediction to drive GPU selection and Ray for distributed orchestration; cluster utilization moved from 65% to 98%.
+      ● Architected the marketplace control plane in Go, TypeScript, and Next.js across 10+ GPU providers, cutting provisioning time from 12 minutes to under 60 seconds at 99.9% availability.
+      ● Optimized high-throughput LLM serving by deploying distributed vLLM instances on 8x NVIDIA A100 nodes via Ray, leveraging Tensor Parallelism (TP=4) and PagedAttention to reduce p99 time-to-first-token (TTFT) by 42%.
     `,
     skills: [
-      "Python",
-      "FastAPI",
-      "LangChain",
-      "GPT-4",
-      "ChromaDB",
-      "AWS EKS",
-      "CI/CD",
-      "Grafana",
+      "LangGraph",
+      "crewAI",
+      "MCP",
+      "vLLM",
+      "Ray",
+      "LoRA",
+      "SFT",
+      "DPO",
+      "MLflow",
+      "Go",
+      "TypeScript",
+      "Next.js",
       "OpenTelemetry",
-      "RAG",
-      "Vector DBs",
+      "LangSmith",
     ],
   },
   {
     id: 1,
-    img: "https://upload.wikimedia.org/wikipedia/commons/7/72/DeloitteNewLogo.jpg",
-    role: "Senior Software Engineer (AI & Cloud Systems)",
-    company: "Deloitte",
-    date: "Apr 2022 - Aug 2024",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Infor_logo.svg/2048px-Infor_logo.svg.png",
+    role: "AI Engineer",
+    company: "Infor US LLC",
+    date: "May 2025 - Dec 2025",
     desc: `
-      ● Architected microservices platform handling 10,000+ clinical trial records with 99.9% uptime, implementing event-driven architecture for real-time data synchronization across regulatory systems.
-      ● Implemented an AI-driven document compliance agent leveraging LLM (GPT-4) and Retrieval-Augmented Generation (RAG) to summarize and cross-reference regulatory reports, increasing reviewer throughput by 35%.
-      ● Built agentic automation workflows using LangChain and AWS Lambda to route data-validation tasks and generate audit summaries, reducing manual intervention and improving task efficiency.
-      ● Implemented real-time KPI dashboards with Apache Superset, Python, and SQL, replacing legacy BI tools and saving $15K annually in licensing costs while improving visibility across teams.
-      ● Designed and secured REST APIs with PostgreSQL under HIPAA compliance, integrating SonarQube quality gates to reduce code complexity by 35% and duplication by 20%.
+      ● Architected an enterprise RAG microservice on GCP GKS (Python, FastAPI, ChromaDB, pgvector) providing natural-language search over 33M+ ERP transaction records at 100K+ daily queries.
+      ● Elevated RAGAS retrieval faithfulness from 0.71 to 0.89 by replacing single-vector search with a hybrid retrieval pipeline (Dense Vector + BM25 Sparse Search) backed by a Cohere Cross-Encoder re-ranker.
+      ● Built an automated offline evaluation pipeline integrated into GitHub Actions CI that runs RAGAS scoring (faithfulness, answer relevance, context precision) on LangSmith traces, blocking regression releases automatically.
+      ● Engineered a two-tier semantic cache (Redis + in-process LRU) that reduced p50 query latency by 35% and lowered LLM API expenditure by $12K annually without sacrificing answer groundedness.
+      ● Authored automated data-readiness scoring pipelines for pipeline completeness and consistency across 33M records, cutting manual pre-validation efforts by 40%.
+      ● Implemented runtime guardrails and PII redaction layers using NeMo Guardrails to sanitize prompts and model responses, preventing prompt injections and maintaining enterprise data privacy compliance.
     `,
     skills: [
       "Python",
-      "LangChain",
-      "GPT-4",
+      "FastAPI",
+      "ChromaDB",
+      "pgvector",
+      "GCP",
       "RAG",
-      "AWS Lambda",
-      "PostgreSQL",
-      "Microservices",
-      "Event-Driven Architecture",
-      "Apache Superset",
-      "HIPAA",
-      "Node.js",
-      "JavaScript",
+      "RAGAS",
+      "Redis",
+      "LangSmith",
+      "NeMo Guardrails",
+      "GitHub Actions",
     ],
   },
   {
     id: 2,
-    img: "https://upload.wikimedia.org/wikipedia/commons/0/04/Datamatics_Logo.svg",
-    role: "Software Engineer",
-    company: "Datamatics",
-    date: "Mar 2021 - Mar 2022",
-    desc: `● Engineered backend services in JavaScript and Node.js for a fintech platform serving 50K+ users, improving latency by 40% and automating onboarding by 90%.
-● Optimized SQL queries and Redis caching, reducing response times by 65% and enabling platform to handle 50K+ transactions/day.
-● Delivered secure payment integration APIs, ensuring compliance with financial data security standards and enhancing transaction reliability.
-● Collaborated with product and DevOps teams to containerize services using Docker and automate CI/CD pipelines, improving deployment efficiency by 30%.`,
+    img: "https://upload.wikimedia.org/wikipedia/commons/7/72/DeloitteNewLogo.jpg",
+    role: "Software Engineer, AI and Cloud Systems",
+    company: "Deloitte",
+    date: "Apr 2022 - Aug 2024",
+    desc: `
+      ● Built and operated an event-driven microservices platform (Node.js, Kafka, AWS Lambda) synchronizing 10K+ clinical trial records across regulatory systems under HIPAA, sustaining 99.9% uptime.
+      ● Designed and secured REST APIs over PostgreSQL, integrating SonarQube quality gates into CI that reduced code complexity 35% and duplication 20%.
+      ● Designed a HIPAA-compliant GPT-4 RAG compliance assistant that improved document reviewer throughput by 35% and cut manual effort by 50%.
+      ● Migrated legacy BI to Apache Superset dashboards (Python, SQL), eliminating $15K annual licensing cost and enabling self-serve analytics for 50+ analysts.
+    `,
     skills: [
-      "JavaScript",
       "Node.js",
-      "Express.js",
-      "MySQL",
-      "Redis",
-      "Docker",
-      "CI/CD",
-      "REST APIs",
-      "Fintech",
+      "Kafka",
+      "AWS Lambda",
+      "PostgreSQL",
+      "GPT-4",
+      "RAG",
+      "Apache Superset",
+      "HIPAA",
+      "SonarQube",
+      "Python",
     ],
   },
   {
     id: 3,
-    img: "https://image.pitchbook.com/LzEJhpEUaklCIIpB0XlfcWMnqoh1648831483750_200x200",
+    img: "https://upload.wikimedia.org/wikipedia/commons/0/04/Datamatics_Logo.svg",
+    role: "Software Engineer",
+    company: "Datamatics",
+    date: "Mar 2021 - Mar 2022",
+    desc: `
+      ● Built Node.js microservices for fintech workflows, reducing API latency 40% and automating 90% of client onboarding, accelerating revenue recognition.
+      ● Optimized PostgreSQL and Redis caching, reducing response times 65% while sustaining 50K+ daily transactions at peak load.
+      ● Delivered PCI-DSS compliant payment integration APIs with zero security incidents during the engagement.
+    `,
+    skills: [
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "REST APIs",
+      "PCI-DSS",
+      "Fintech",
+    ],
+  },
+  {
+    id: 4,
+    img: `${process.env.PUBLIC_URL}/hexagon-logo.png`,
     role: "Associate Software Engineer",
-    company: "Hexagram Fintech Pvt Ltd",
+    company: "Hexagon Global",
     date: "Aug 2019 - Mar 2021",
-    desc: `● Developed Report Designer using Java, Spring Boot, and React, reducing report creation time from 4 hours to 30 minutes.
-● Optimized data ingestion and API layers, improving backend throughput by 25% and system reliability under load.
-● Automated CI/CD with Docker and Kubernetes, reducing deployment time by 30%.
-● Enhanced backend data processing and caching mechanisms using Redis, ensuring reliable access to large datasets for reporting.`,
+    desc: `
+      ● Built a modular Report Designer in Java and Spring Boot that cut analyst report creation from 2 hours to 10 minutes.
+      ● Optimized data ingestion and API layers for 25% higher backend throughput under sustained load.
+      ● Automated CI/CD pipeline with Docker and Kubernetes, reducing release cycle time by 30%.
+    `,
     skills: [
       "Java",
       "Spring Boot",
-      "React",
-      "MySQL",
-      "Redis",
       "Docker",
       "Kubernetes",
       "CI/CD",
@@ -385,46 +422,70 @@ export const education = [
     id: 1,
     img: "https://upload.wikimedia.org/wikipedia/en/a/a1/Arizona_State_University_seal.svg",
     school: "Arizona State University",
-    date: "Aug 2024 - May 2026",
-    gpa: "GPA: 4.0/4.0",
-    desc: "Currently pursuing a Master of Science in Data Science, Analytics, and Engineering with a focus on machine learning, data analysis, AI systems, and scalable distributed systems.",
-    degree: "M.S. Data Science, Analytics, and Engineering",
-  },  
+    date: "May 2026",
+    gpa: "GPA: 4.0 / 4.0",
+    desc: "M.S. in Data Science, Analytics and Engineering with focus on machine learning, AI systems, and scalable distributed systems.",
+    degree: "M.S., Data Science, Analytics and Engineering",
+  },
   {
     id: 2,
     img: "https://upload.wikimedia.org/wikipedia/en/a/a0/Visvesvaraya_Technological_University_logo.png",
     school: "Visvesvaraya Technological University",
-    date: "Aug 2014 - Jun 2018",
-    gpa: "GPA: 3.5",
-    desc: "Completed Bachelor of Engineering in Computer Science & Engineering with focus on software engineering, algorithms, and data structures.",
-    degree: "B.E. Computer Science & Engineering",
-  }
+    date: "May 2018",
+    gpa: "GPA: 3.5 / 4.0",
+    desc: "B.E. in Computer Science and Engineering with focus on software engineering, algorithms, and data structures.",
+    degree: "B.E., Computer Science and Engineering",
+  },
 ];
 
 export const projects = [
   {
     id: 0,
-    title: "Code Quality Intelligence Agent",
-    date: "Aug 2025 - Sep 2025",
+    title: "Evidence Locker – AI Compliance Evidence Management",
+    date: "2026",
     description:
-      `● Built an AI-driven agent that detects security, performance, and maintainability issues across multi-language repositories.
-● Integrated a Retrieval-Augmented Generation (RAG) pipeline using LangChain and ChromaDB for contextual Q&A on codebases.
-● Designed a modular analysis orchestrator with FastAPI backend and React dashboard for interactive code-quality insights.
-● Added AST-based analyzers for code duplication, complexity, and test coverage with LLM explanations and fix suggestions.
-● Analyzed 100K+ LOC repositories with multi-language support and produced PDF reports for CI/CD integration.`,
+      `● Engineered a Next.js 15, PostgreSQL, and Prisma application classifying compliance evidence against NIST SP 800-53 controls using Claude Sonnet with structured outputs.
+● Utilized prompt caching to slash repeated token costs by 60% and built an async Postgres queue (SELECT FOR UPDATE SKIP LOCKED) to ensure audit trail immutability.
+● Playwright end-to-end coverage, GitHub Actions CI, and single-command Docker Compose setup.`,
+    image: `${process.env.PUBLIC_URL}/projects/evidence-locker.png`,
+    tags: [
+      "Next.js 15",
+      "PostgreSQL",
+      "Prisma",
+      "Claude Sonnet",
+      "Playwright",
+      "Docker Compose",
+      "GitHub Actions",
+    ],
+    category: "web app",
+    github: "https://github.com/rajmahato111/evidence-locker",
+    webapp: "",
+    member: [
+      {
+        name: "Raj Kumar Mahto",
+        img: `${process.env.PUBLIC_URL}/RajImage.jpeg`,
+        linkedin: "https://www.linkedin.com/in/rajmahato111/",
+        github: "https://github.com/rajmahato111",
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "Code Quality Intelligence Agent",
+    date: "2025",
+    description:
+      `● Built a multi-language codebase analysis agent parsing AST structures with tree-sitter, enabling scope-aware context retrieval beyond standard fixed-window chunking.
+● Integrated six parallel static analysis engines (security, performance, complexity) orchestrated via FastAPI, CLI, and React UI.`,
     image:
       "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     tags: [
       "Python",
       "FastAPI",
-      "React.js",
-      "LangChain",
-      "RAG",
-      "ChromaDB",
+      "React",
+      "tree-sitter",
+      "CLI",
+      "Static Analysis",
       "LLM",
-      "AST",
-      "CI/CD",
-      "Node.js",
     ],
     category: "web app",
     github: "https://github.com/rajmahato111/Code-Quality-Intelligence-Agent",
@@ -432,7 +493,7 @@ export const projects = [
     member: [
       {
         name: "Raj Kumar Mahto",
-        img: "https://avatars.githubusercontent.com/u/18094764?v=4",
+        img: `${process.env.PUBLIC_URL}/RajImage.jpeg`,
         linkedin: "https://www.linkedin.com/in/rajmahato111/",
         github: "https://github.com/rajmahato111",
       },
