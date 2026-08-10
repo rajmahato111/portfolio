@@ -19,7 +19,7 @@ const Projects = ({ openModal, setOpenModal }) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          Projects showcasing my work in AI systems, RAG pipelines, and production-ready applications with focus on scalability and performance.
+          Selected projects in AI compliance systems, multi-language code intelligence, and production-ready LLM applications.
         </Desc>
         <ToggleButtonGroup>
           <ToggleButton
@@ -27,7 +27,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             value="web app"
             onClick={() => setToggle("web app")}
           >
-            Latest Project
+            Featured Projects
           </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
