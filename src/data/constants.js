@@ -238,7 +238,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Infor_logo.svg/2048px-Infor_logo.svg.png",
+    img: `${process.env.PUBLIC_URL}/infor-logo.png`,
     role: "AI Engineer",
     company: "Infor US LLC",
     date: "May 2025 - Dec 2025",
