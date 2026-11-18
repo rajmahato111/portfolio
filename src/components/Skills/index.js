@@ -114,6 +114,8 @@ const SkillItem = styled.div`
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
+  object-fit: contain;
+  background: transparent;
 `;
 
 const Skills = () => {
@@ -122,7 +124,7 @@ const Skills = () => {
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
-          Here are some of my technical skills covering AI/ML, programming languages, frameworks, cloud infrastructure, and databases.
+          Skills aligned with my resume across AI/ML, languages, frameworks, cloud infrastructure, databases, and observability.
         </Desc>
         <SkillsContainer>
           {skills.map((skill, idx) => (
