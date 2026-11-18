@@ -1,15 +1,15 @@
 export const Bio = {
   name: "Raj Kumar Mahto",
   roles: [
-    "AI Engineer",
-    "LLM Systems Engineer",
-    "Multi-Agent Systems Builder",
-    "RAG Systems Specialist",
-    "Cloud-Native AI Engineer",
+    "Full Stack AI Engineer",
+    "Generative AI Engineer",
+    "RAG & Agentic AI Engineer",
+    "LLM Inference Engineer",
+    "AI Infrastructure Engineer",
   ],
   description:
-    "AI Engineer with 6 years of experience engineering production LLM systems, distributed inference, and high-throughput microservices. Architected multi-agent orchestration systems cutting manual provisioning by 80%, built high-scale enterprise RAG pipelines handling 100K+ daily queries over 33M+ records, and enforced automated CI/CD evaluation gates. Deep expertise building low-latency LLM serving platforms with vLLM and Ray, production fine-tuning pipelines (LoRA, SFT, DPO), and cloud-native AI infrastructure on AWS and GCP.",
-  location: "San Francisco, CA",
+    "Full Stack AI Engineer with 6+ years of experience building production LLM, RAG, and agentic AI systems across automotive, healthcare, fintech, and enterprise platforms. Recent work spans distributed GPU orchestration, multi-agent scheduling, and high-scale RAG pipelines serving 100K+ queries/day. Deep expertise with vLLM, Ray, Kubernetes, LangGraph, and cloud-native AI infrastructure on AWS, Azure, and GCP.",
+  location: "Greater Phoenix Area, AZ",
   phone: "+1-623-445-1844",
   email: "rajmahato111@gmail.com",
   github: "https://github.com/rajmahato111",
@@ -207,122 +207,150 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: `${process.env.PUBLIC_URL}/odyn-logo.png`,
-    role: "AI Engineer",
-    company: "Pebl (Odyn Network)",
-    date: "Jan 2026 - Present",
+    img: `${process.env.PUBLIC_URL}/bill-luke-logo.png`,
+    role: "Full Stack AI Engineer",
+    company: "Bill Luke Automotive Dealerships",
+    date: "Sep 2026 - Present",
     desc: `
-      ● Architected an event-driven multi-agent GPU scheduling framework (LangGraph, crewAI, MCP) autonomously routing 80% of inference and fine-tune workloads across multi-cloud GPU providers, saving 15 engineering hours weekly.
-      ● Instrumented agent execution loops with LangSmith tracing, OpenTelemetry, and automated failure taxonomies, reducing non-deterministic agent debugging time by 40%.
-      ● Fine-tuned a RoBERTa sequence classifier (LoRA, MLflow) predicting request token length before scheduling; dynamically allocated vLLM engine configs and boosted cluster-wide GPU memory utilization from 70% to 95%.
-      ● Shipped a self-serve fine-tuning platform supporting SFT and DPO, using VRAM prediction to drive GPU selection and Ray for distributed orchestration; cluster utilization moved from 65% to 98%.
-      ● Architected the marketplace control plane in Go, TypeScript, and Next.js across 10+ GPU providers, cutting provisioning time from 12 minutes to under 60 seconds at 99.9% availability.
-      ● Optimized high-throughput LLM serving by deploying distributed vLLM instances on 8x NVIDIA A100 nodes via Ray, leveraging Tensor Parallelism (TP=4) and PagedAttention to reduce p99 time-to-first-token (TTFT) by 42%.
+      ● Full Stack AI Engineer focused on Generative AI, RAG, agentic systems, and LLM inference infrastructure for automotive dealership operations.
+    `,
+    skills: [
+      "Generative AI",
+      "RAG",
+      "Agentic AI",
+      "LLM Inference",
+      "vLLM",
+      "Ray",
+      "Kubernetes",
+      "Full Stack",
+    ],
+  },
+  {
+    id: 1,
+    img: `${process.env.PUBLIC_URL}/pebl-logo.png`,
+    role: "AI Engineer",
+    company: "Pebl",
+    date: "Jan 2026 - Sep 2026",
+    desc: `
+      ● Architected a distributed GPU marketplace using Go, TypeScript, and AWS across 10+ GPU providers, cutting provisioning time from ~12 min to under 60 sec at 99.9% availability.
+      ● Engineered a predictive inference load balancer with a Hugging Face Transformers LoRA-tuned RoBERTa model (MLflow tracking) to estimate request token length, improving average GPU utilization by ~30%.
+      ● Built a 0-to-1 multi-agent GPU selection and scheduling system with LangGraph and crewAI, integrating OpenAI and Anthropic APIs via MCP, automating optimal GPU assignment for 80% of requests and saving ~15 engineer-hours/week.
+      ● Implemented an agent observability pipeline with LangSmith for trace logging, tool-call retries, and failure-mode analysis, reducing agentic workflow debugging time by ~40%.
+      ● Engineered an ML-driven GPU performance prediction model with scikit-learn, cutting pre-deployment benchmarking cost by ~60% and evaluation cycles from 3 days to 4 hours.
+      ● Launched a production LLM fine-tuning platform supporting SFT and DPO with Ray-based distributed GPU orchestration, raising GPU utilization from ~70% to 90-95%.
     `,
     skills: [
       "LangGraph",
       "crewAI",
       "MCP",
-      "vLLM",
-      "Ray",
       "LoRA",
-      "SFT",
-      "DPO",
       "MLflow",
+      "Ray",
       "Go",
       "TypeScript",
-      "Next.js",
-      "OpenTelemetry",
+      "AWS",
       "LangSmith",
-    ],
-  },
-  {
-    id: 1,
-    img: `${process.env.PUBLIC_URL}/infor-logo.png`,
-    role: "AI Engineer",
-    company: "Infor US LLC",
-    date: "May 2025 - Dec 2025",
-    desc: `
-      ● Architected an enterprise RAG microservice on GCP GKS (Python, FastAPI, ChromaDB, pgvector) providing natural-language search over 33M+ ERP transaction records at 100K+ daily queries.
-      ● Elevated RAGAS retrieval faithfulness from 0.71 to 0.89 by replacing single-vector search with a hybrid retrieval pipeline (Dense Vector + BM25 Sparse Search) backed by a Cohere Cross-Encoder re-ranker.
-      ● Built an automated offline evaluation pipeline integrated into GitHub Actions CI that runs RAGAS scoring (faithfulness, answer relevance, context precision) on LangSmith traces, blocking regression releases automatically.
-      ● Engineered a two-tier semantic cache (Redis + in-process LRU) that reduced p50 query latency by 35% and lowered LLM API expenditure by $12K annually without sacrificing answer groundedness.
-      ● Authored automated data-readiness scoring pipelines for pipeline completeness and consistency across 33M records, cutting manual pre-validation efforts by 40%.
-      ● Implemented runtime guardrails and PII redaction layers using NeMo Guardrails to sanitize prompts and model responses, preventing prompt injections and maintaining enterprise data privacy compliance.
-    `,
-    skills: [
-      "Python",
-      "FastAPI",
-      "ChromaDB",
-      "pgvector",
-      "GCP",
-      "RAG",
-      "RAGAS",
-      "Redis",
-      "LangSmith",
-      "NeMo Guardrails",
-      "GitHub Actions",
+      "scikit-learn",
+      "SFT",
+      "DPO",
     ],
   },
   {
     id: 2,
-    img: "https://upload.wikimedia.org/wikipedia/commons/7/72/DeloitteNewLogo.jpg",
-    role: "Software Engineer, AI and Cloud Systems",
-    company: "Deloitte",
-    date: "Apr 2022 - Aug 2024",
+    img: `${process.env.PUBLIC_URL}/infor-logo.png`,
+    role: "AI Engineer",
+    company: "Infor",
+    date: "May 2025 - Aug 2025",
     desc: `
-      ● Built and operated an event-driven microservices platform (Node.js, Kafka, AWS Lambda) synchronizing 10K+ clinical trial records across regulatory systems under HIPAA, sustaining 99.9% uptime.
-      ● Designed and secured REST APIs over PostgreSQL, integrating SonarQube quality gates into CI that reduced code complexity 35% and duplication 20%.
-      ● Designed a HIPAA-compliant GPT-4 RAG compliance assistant that improved document reviewer throughput by 35% and cut manual effort by 50%.
-      ● Migrated legacy BI to Apache Superset dashboards (Python, SQL), eliminating $15K annual licensing cost and enabling self-serve analytics for 50+ analysts.
+      ● Architected and deployed a FastAPI + LangChain orchestration layer using GPT-4 and ChromaDB for retrieval-augmented insights on 33M+ ERP transactions.
+      ● Automated enterprise data-readiness scoring for completeness, accuracy, and timeliness, cutting manual validation by 40%.
+      ● Optimized RAG retrieval and embedding caching, reducing response latency by 35% and LLM inference cost through token-efficient context generation.
+      ● Integrated Grafana and OpenTelemetry monitoring for uptime, latency, and API throughput across production clusters.
+      ● Deployed containerized microservices on AWS EKS with CI/CD automation, secret management, and autoscaling for high availability.
     `,
     skills: [
-      "Node.js",
-      "Kafka",
-      "AWS Lambda",
-      "PostgreSQL",
-      "GPT-4",
-      "RAG",
-      "Apache Superset",
-      "HIPAA",
-      "SonarQube",
       "Python",
+      "FastAPI",
+      "LangChain",
+      "GPT-4",
+      "ChromaDB",
+      "AWS EKS",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Grafana",
+      "OpenTelemetry",
     ],
   },
   {
     id: 3,
-    img: "https://upload.wikimedia.org/wikipedia/commons/0/04/Datamatics_Logo.svg",
-    role: "Software Engineer",
-    company: "Datamatics",
-    date: "Mar 2021 - Mar 2022",
+    img: `${process.env.PUBLIC_URL}/deloitte-logo.png`,
+    role: "Software Engineer (AI & Cloud Systems)",
+    company: "Deloitte",
+    date: "Apr 2022 - Aug 2024",
     desc: `
-      ● Built Node.js microservices for fintech workflows, reducing API latency 40% and automating 90% of client onboarding, accelerating revenue recognition.
-      ● Optimized PostgreSQL and Redis caching, reducing response times 65% while sustaining 50K+ daily transactions at peak load.
-      ● Delivered PCI-DSS compliant payment integration APIs with zero security incidents during the engagement.
+      ● Architected an event-driven microservices platform handling 10K+ clinical trial records with 99.9% uptime on TypeScript/Node.js and AWS Lambda.
+      ● Developed an AI-driven document compliance agent using GPT-4, RAG, and LangChain, increasing reviewer throughput by 35%.
+      ● Built agentic workflow automation with AWS Lambda and LangChain for validation and audit generation, cutting manual checks by 40%.
+      ● Implemented Apache Superset dashboards (Python + SQL), saving $15K annually and improving trial and logistics visibility.
+      ● Integrated SonarQube security gates into CI/CD, reducing code complexity by 35% and duplication by 20% under HIPAA constraints.
     `,
     skills: [
+      "TypeScript",
       "Node.js",
+      "AWS Lambda",
+      "GPT-4",
+      "LangChain",
+      "RAG",
       "PostgreSQL",
-      "Redis",
-      "REST APIs",
-      "PCI-DSS",
-      "Fintech",
+      "Apache Superset",
+      "HIPAA",
+      "SonarQube",
     ],
   },
   {
     id: 4,
+    img: `${process.env.PUBLIC_URL}/datamatics-logo.png`,
+    role: "Software Engineer (Backend & API Development)",
+    company: "Datamatics",
+    date: "Mar 2021 - Mar 2022",
+    desc: `
+      ● Developed Node.js and Express microservices for customer and loan workflows, improving API latency by 40% and reducing manual onboarding by 90%.
+      ● Optimized PostgreSQL and Redis caching, cutting response times 65% while sustaining 50K+ transactions/day.
+      ● Prototyped an AI-assisted support engine with Python and OpenAI for automated customer query classification.
+      ● Implemented CI/CD with Docker and Jenkins, improving deployment efficiency by 30% at 99.9% uptime.
+      ● Delivered PCI-DSS compliant payment APIs with high reliability under load.
+    `,
+    skills: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Redis",
+      "Python",
+      "OpenAI API",
+      "Docker",
+      "Jenkins",
+      "PCI-DSS",
+    ],
+  },
+  {
+    id: 5,
     img: `${process.env.PUBLIC_URL}/hexagon-logo.png`,
-    role: "Associate Software Engineer",
+    role: "Software Engineer (Java Full Stack / Backend)",
     company: "Hexagon Global",
     date: "Aug 2019 - Mar 2021",
     desc: `
-      ● Built a modular Report Designer in Java and Spring Boot that cut analyst report creation from 2 hours to 10 minutes.
-      ● Optimized data ingestion and API layers for 25% higher backend throughput under sustained load.
-      ● Automated CI/CD pipeline with Docker and Kubernetes, reducing release cycle time by 30%.
+      ● Developed a modular Report Designer with Java, Spring Boot, and Angular, reducing report creation from 3 hours to 30 minutes.
+      ● Engineered REST APIs and microservices for data ingestion and reporting, improving throughput by 25%.
+      ● Optimized PostgreSQL and MySQL queries, cutting latency by 40% and lowering RDS costs by 20%.
+      ● Automated CI/CD with Docker and Kubernetes, shortening release cycles by 30%.
     `,
     skills: [
       "Java",
       "Spring Boot",
+      "Angular",
+      "PostgreSQL",
+      "MySQL",
       "Docker",
       "Kubernetes",
       "CI/CD",
@@ -335,19 +363,19 @@ export const education = [
     id: 1,
     img: "https://upload.wikimedia.org/wikipedia/en/a/a1/Arizona_State_University_seal.svg",
     school: "Arizona State University",
-    date: "May 2026",
+    date: "2024 - 2026",
     gpa: "GPA: 4.0 / 4.0",
-    desc: "M.S. in Data Science, Analytics and Engineering with focus on machine learning, AI systems, and scalable distributed systems.",
+    desc: "M.S. in Data Science, Analytics and Engineering focused on applied machine learning, large-scale data processing, and AI-driven system design.",
     degree: "M.S., Data Science, Analytics and Engineering",
   },
   {
     id: 2,
     img: "https://upload.wikimedia.org/wikipedia/en/a/a0/Visvesvaraya_Technological_University_logo.png",
-    school: "Visvesvaraya Technological University",
-    date: "May 2018",
+    school: "Atria Institute of Technology (VTU)",
+    date: "2014 - 2018",
     gpa: "GPA: 3.5 / 4.0",
-    desc: "B.E. in Computer Science and Engineering with focus on software engineering, algorithms, and data structures.",
-    degree: "B.E., Computer Science and Engineering",
+    desc: "B.E. in Computer Science with foundation in software engineering, algorithms, full-stack development, and scalable web application design.",
+    degree: "B.E., Computer Science",
   },
 ];
 
